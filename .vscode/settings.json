@@ -1,7 +1,0 @@
-{
-    "terminal.integrated.cursorBlinking": false,
-    "terminal.integrated.cursorStyle": "block",
-    "terminal.integrated.minimumContrastRatio": 4.5,
-    "workbench.statusBar.visible": false,
-    "zenMode.hideStatusBar": true
-}

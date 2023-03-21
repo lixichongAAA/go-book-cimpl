@@ -6,6 +6,7 @@ require (
 	github.com/go-kit/kit v0.9.0
 	github.com/gorilla/mux v1.6.2
 	github.com/longjoy/micro-go-book v0.0.0-20220721123104-2816995f87e0
+	github.com/satori/go.uuid v1.2.0
 )
 
 require (

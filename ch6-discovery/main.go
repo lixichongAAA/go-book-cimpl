@@ -15,7 +15,7 @@ import (
 	"ch6-discovery/service"
 	"ch6-discovery/transport"
 
-	"ch6-discovery/endpoint"
+	"github.com/longjoy/micro-go-book/ch6-discovery/endpoint"
 
 	uuid "github.com/satori/go.uuid"
 )
@@ -40,6 +40,15 @@ func main() {
 
 	//声明服务发现客户端
 	var discoveryClient discover.DiscoveryClient
+	//直接使用HTTP与consul交互
+	//discoveryClient, err := discover.NewMyDiscoverClient(*consulHost, *consulPort)
+	//借助Go-kit服务注册与发现包和Consul交互
+	discoveryClient, err := discover.NewKitDiscoverClient(*consulHost, *consulPort)
+	//获取服务发现客户端失败,直接关闭服务
+	if err != nil {
+		config.Logger.Println("Get Consul Client failed.")
+		os.Exit(-1)
+	}
 
 	//声明并初始化Service
 	var svc = service.NewDiscoveryServiceImpl(discoveryClient)

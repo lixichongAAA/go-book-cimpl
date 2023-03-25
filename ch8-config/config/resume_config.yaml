@@ -1,0 +1,11 @@
+RegisterTime: "2023-3-24 10:17:34"
+Address: "Beijing"
+ResumeInformation:
+  Name: "Lixichong"
+  Age: 21
+  Sex: "male"
+  Habits:
+    - "sing"
+    - "skip"
+    - "rap"
+    - "basketball"

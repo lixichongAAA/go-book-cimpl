@@ -43,7 +43,6 @@ func main() {
 
 	//创建反向代理
 	proxy := NewReverseProxy(consulClient, logger)
-
 	errc := make(chan error)
 	go func() {
 		c := make(chan os.Signal)

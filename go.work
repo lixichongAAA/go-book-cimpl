@@ -1,6 +1,7 @@
 go 1.20
 
 use (
+	./ch10-resiliiency
 	./ch5-web
 	./ch6-discovery
 	./ch9-gateway
